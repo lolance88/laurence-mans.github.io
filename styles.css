@@ -160,27 +160,18 @@ svg {
   border-radius: 18px;
   padding: 1.25rem;
   box-shadow: 0 12px 30px rgba(74, 72, 70, 0.06);
-  margin-bottom: 0.4rem;
+  margin-bottom: 1.25rem;
 }
 
 .section-card h2,
-.split-section h2,
-.contact-section h2 {
+.split-section h2 {
   margin-top: 0;
   font-size: 2rem;
 }
 
 .section-card p,
-.split-section p,
-.contact-section p {
+.split-section p {
   color: #4c4a48;
-}
-
-.contact-section {
-  background: rgba(255, 255, 255, 0.96);
-  border: 1px solid rgba(255, 255, 255, 0.85);
-  box-shadow: 0 14px 35px rgba(74, 72, 70, 0.07);
-  padding: 1.5rem;
 }
 
 .split-section {
@@ -203,12 +194,18 @@ svg {
   font-size: 2.2rem;
 }
 
-#travel.split-section {
-  grid-template-columns: 0.9fr 1.1fr;
+#travel.section-card,
+#contact.section-card {
+  padding: 1.25rem;
+  max-width: 100%;
+  margin: 0 auto 1.25rem;
 }
 
-#travel.split-section > div:last-child {
-  min-height: 420px;
+#travel.section-card > .dress-code-image,
+#contact.section-card > .travel-image {
+  width: min(100%, 640px);
+  margin: 1rem auto 0;
+  min-height: 300px;
   aspect-ratio: 4 / 3;
 }
 
@@ -300,20 +297,6 @@ svg {
   align-items: center;
   justify-content: center;
 }
-.section#travel {
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
-}
-
-/* Reduce the top padding of the following contact section when it directly follows travel */
-#travel + .contact-section {
-  padding-top: 0.6rem;
-}
-
-/* Slightly reduce bottom padding of itinerary to tighten gap above travel */
-#itinerary {
-  padding-bottom: 0.5rem;
-}
 .venue-image {
   background-image: url('venue-photo.jpg');
 }
@@ -398,5 +381,14 @@ svg {
 
   .hero-content h2 {
     font-size: 2.5rem;
+  }
+
+  #travel.split-section {
+    gap: 0.75rem;
+    padding: 1.5rem;
+  }
+
+  .dress-code-image {
+    min-height: 280px;
   }
 }
